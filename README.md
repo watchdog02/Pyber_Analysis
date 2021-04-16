@@ -16,22 +16,12 @@ While working at a ride-sharing company, PyBer, I've been tasked with creating v
 
 ## Summary
 The analysis of the election show that:
-- There were 369,711 votes cast in the election.
-- The candidates were:
-    - Charles Casper Stockham
-    - Diana DeGette
-    - Raymon Anthony Doane
-- The candidate results were:
-    - Charles Casper Stockham received 23.0% of the votes and 85,213 votes
-    - Diana DeGette recieved 73.8% of the votes and 272,892 votes
-    - Raymon Anthony Doane recieved 3.1% of the votes 11,606 votes
-- The winner of the election was:
-    - Diana DeGette, who received 73.8% of the vote and 272,892 votes.
+- Urban cities have on average lower fares, but higher counts of rides compared to Suburban and Rural cities. Rural cities had higher fares, but less rides.
+- Urban cities have the most driver numbers compared the Suburban and Rural cities
+- Urban cities make up about 63% of all fares recieved. Suburban follows with about 30% and Rural trails with 7%
+- Urban citis also lead with 81% of drivers
 ## Challenge Overview
-
+This challenge consisted of using the same data and create a pivot table as a dataframe with the city types as the index and Total Rides, Total Drivers, Total Fares, Average Fare per Ride, and Average Fare per Driver as the columns. Once that had been created, a new dataframe was needed to create a line plot of the fares in different city types over time. The plot had to be easily ledgible and in the fivethirtyeight color scheme.
 ## Challenge Summary
-
-
-This Challenge consisted of adjusting the current script to include county statistics in the text file. These include which county got the most votes and the percentage of votes for each county. By adding a few new variables and dictionaries to record the data from election_results.csv, a similar if and for loops as the candidate variables can be used. 
-
-This python script will pull data and create statistical information about any election results csv that has a header of Ballot ID, County, and Candidate in that order. It will give you a text file showing the county with the most votes, winning candidate and the percentage and count of votes for them. Should more data be aquired, the script could be adjusted to read more columns and analyze them. If you'd like a more visual format, graphs and charts can be made as well. 
+To create the pivot tables, I first found the values I wanted and saved them in their own variables. Then I took them and created a dataframe with the same index; Rural, Suburban, Urban. From there it was some formating to make it look nice and the summary was ready to read. 
+For the line chart, new dataframes had to be created using groupby of types and dates. From there, the pivot function helped in asigning date as the index, type as the columns, and the values as fare.Then the dates were to be condensed into weeks and then ploted to a line graph where some editing would make it easier to read.
